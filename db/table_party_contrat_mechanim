@@ -1,0 +1,22 @@
+﻿-- Table: party_contrat_mechanim
+
+-- DROP TABLE party_contrat_mechanim;
+
+CREATE TABLE party_contrat_mechanim
+(
+  id integer,
+  comment character varying,
+  create_uid integer,
+  create_date timestamp(6) without time zone,
+  value character varying,
+  write_date timestamp(6) without time zone,
+  activo bit(1),
+  id_party integer,
+  type_contacto character varying,
+  idaddress integer
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE party_contrat_mechanim
+  OWNER TO postgres;

@@ -1,0 +1,18 @@
+﻿-- Table: datos_academicos
+
+-- DROP TABLE datos_academicos;
+
+CREATE TABLE datos_academicos
+(
+  id integer,
+  id_party integer,
+  universidad character varying,
+  fecha_titulo date,
+  fecha_min date,
+  fecha_mej date
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE datos_academicos
+  OWNER TO postgres;

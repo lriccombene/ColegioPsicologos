@@ -1,0 +1,26 @@
+﻿-- Table: party_address
+
+-- DROP TABLE party_address;
+
+CREATE TABLE party_address
+(
+  id integer, -- ID
+  "Ciudad" character varying, -- Ciudad
+  create_date timestamp(6) without time zone, -- Create Date
+  nombre character varying,
+  zip character varying,
+  create_uid integer,
+  subdivision character varying,
+  pais character varying,
+  street character varying,
+  id_party integer
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE party_address
+  OWNER TO postgres;
+COMMENT ON COLUMN party_address.id IS 'ID';
+COMMENT ON COLUMN party_address."Ciudad" IS 'Ciudad';
+COMMENT ON COLUMN party_address.create_date IS 'Create Date';
+

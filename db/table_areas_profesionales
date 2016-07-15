@@ -1,0 +1,18 @@
+﻿-- Table: areas_profesionales
+
+-- DROP TABLE areas_profesionales;
+
+CREATE TABLE areas_profesionales
+(
+  id integer NOT NULL,
+  descripcion character varying,
+  CONSTRAINT areas_profesionales_pkey PRIMARY KEY (id),
+  CONSTRAINT areas_profesionales_id_fkey FOREIGN KEY (id)
+      REFERENCES actuacion_laboral (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE areas_profesionales
+  OWNER TO postgres;

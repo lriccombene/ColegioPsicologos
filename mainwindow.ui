@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>form_MainWindow</class>
+ <widget class="QMainWindow" name="form_MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>998</width>
+    <height>554</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>998</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuProfesionales">
+    <property name="title">
+     <string>Profesionales</string>
+    </property>
+    <addaction name="actionAgregar_Profesional"/>
+    <addaction name="actionAcutalizar_profesional"/>
+    <addaction name="actionBorrar_Profesional"/>
+    <addaction name="actionBuscar_Profesional"/>
+   </widget>
+   <widget class="QMenu" name="menuServicios">
+    <property name="title">
+     <string>Contratos</string>
+    </property>
+    <widget class="QMenu" name="menuConfiguracion">
+     <property name="title">
+      <string>Configuración</string>
+     </property>
+     <addaction name="actionServicios_de_contratos"/>
+    </widget>
+    <addaction name="actionNuevo_Contrato"/>
+    <addaction name="actionBuscar_Contrato"/>
+    <addaction name="actionGenerar_Facturas"/>
+    <addaction name="actionGenerar_Consumo"/>
+    <addaction name="menuConfiguracion"/>
+   </widget>
+   <widget class="QMenu" name="menuUsaurios">
+    <property name="title">
+     <string>Usuarios</string>
+    </property>
+    <addaction name="actionNuevo_Usuario"/>
+    <addaction name="actionBorrar_Usuario"/>
+   </widget>
+   <widget class="QMenu" name="menuProductos">
+    <property name="title">
+     <string>Productos</string>
+    </property>
+    <addaction name="actionBuscar_Productos"/>
+    <addaction name="actionNuevo_Producto"/>
+    <addaction name="actionBorrar_Producto"/>
+    <addaction name="actionActualizar_Productos"/>
+   </widget>
+   <widget class="QMenu" name="menuFacturacion">
+    <property name="title">
+     <string>Facturación</string>
+    </property>
+    <addaction name="actionNueva_Factura"/>
+    <addaction name="actionBuscar_Factura"/>
+    <addaction name="actionActualizar_Factura"/>
+    <addaction name="actionBorrar_Factura"/>
+   </widget>
+   <addaction name="menuProfesionales"/>
+   <addaction name="menuProductos"/>
+   <addaction name="menuServicios"/>
+   <addaction name="menuFacturacion"/>
+   <addaction name="menuUsaurios"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionAgregar_Profesional">
+   <property name="text">
+    <string>Agregar Profesional</string>
+   </property>
+  </action>
+  <action name="actionAcutalizar_profesional">
+   <property name="text">
+    <string>Acutalizar Profesional</string>
+   </property>
+  </action>
+  <action name="actionBorrar_Profesional">
+   <property name="text">
+    <string>Borrar Profesional</string>
+   </property>
+  </action>
+  <action name="actionBuscar_Profesional">
+   <property name="text">
+    <string>Buscar Profesional</string>
+   </property>
+  </action>
+  <action name="actionContratos">
+   <property name="text">
+    <string>contratos</string>
+   </property>
+  </action>
+  <action name="actionNuevo_Contrato">
+   <property name="text">
+    <string>Nuevo Contratos</string>
+   </property>
+  </action>
+  <action name="actionBuscar_Contrato">
+   <property name="text">
+    <string>Buscar Contratos</string>
+   </property>
+  </action>
+  <action name="actionNuevo_Usuario">
+   <property name="text">
+    <string>Nuevo Usuario</string>
+   </property>
+  </action>
+  <action name="actionServicios_de_contratos">
+   <property name="text">
+    <string>Servicios de contratos</string>
+   </property>
+  </action>
+  <action name="actionBuscar_Productos">
+   <property name="text">
+    <string>Buscar Productos</string>
+   </property>
+  </action>
+  <action name="actionNuevo_Producto">
+   <property name="text">
+    <string>Nuevo Producto</string>
+   </property>
+  </action>
+  <action name="actionBorrar_Producto">
+   <property name="text">
+    <string>Borrar Producto</string>
+   </property>
+  </action>
+  <action name="actionActualizar_Productos">
+   <property name="text">
+    <string>Actualizar Producto</string>
+   </property>
+  </action>
+  <action name="actionNueva_Factura">
+   <property name="text">
+    <string>Nueva Factura</string>
+   </property>
+  </action>
+  <action name="actionBuscar_Factura">
+   <property name="text">
+    <string>Buscar Factura</string>
+   </property>
+  </action>
+  <action name="actionActualizar_Factura">
+   <property name="text">
+    <string>Actualizar Factura</string>
+   </property>
+  </action>
+  <action name="actionBorrar_Factura">
+   <property name="text">
+    <string>Borrar Factura</string>
+   </property>
+  </action>
+  <action name="actionGenerar_Facturas">
+   <property name="text">
+    <string>Generar Facturas</string>
+   </property>
+  </action>
+  <action name="actionBorrar_Usuario">
+   <property name="text">
+    <string>Borrar Usuario</string>
+   </property>
+  </action>
+  <action name="actionGenerar_Consumo">
+   <property name="text">
+    <string>Generar Consumo</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

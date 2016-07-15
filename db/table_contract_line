@@ -1,0 +1,21 @@
+﻿-- Table: contract_line
+
+-- DROP TABLE contract_line;
+
+CREATE TABLE contract_line
+(
+  id integer,
+  create_uid integer,
+  create_date date,
+  descripcion character varying,
+  id_servicio integer,
+  fecha_inicio date,
+  fecha_fin integer,
+  precio_unidad money,
+  id_contrato integer
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE contract_line
+  OWNER TO postgres;

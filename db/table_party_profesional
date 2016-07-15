@@ -1,0 +1,34 @@
+﻿-- Table: party_profesional
+
+-- DROP TABLE party_profesional;
+
+CREATE TABLE party_profesional
+(
+  id integer NOT NULL,
+  id_party integer,
+  estado_civil character varying,
+  nacionalidad character varying,
+  fecha_nac date,
+  lugar character varying,
+  legajo character varying,
+  nro_legajo character varying,
+  CONSTRAINT party_profesional_pkey PRIMARY KEY (id),
+  CONSTRAINT id_profesional_id_party FOREIGN KEY (id_party)
+      REFERENCES party_party (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE party_profesional
+  OWNER TO postgres;
+
+-- Index: fki_id_profesional_id_party
+
+-- DROP INDEX fki_id_profesional_id_party;
+
+CREATE INDEX fki_id_profesional_id_party
+  ON party_profesional
+  USING btree
+  (id_party);
+

@@ -1,0 +1,19 @@
+﻿-- Table: contrat_service
+
+-- DROP TABLE contrat_service;
+
+CREATE TABLE contrat_service
+(
+  id integer,
+  create_id integer,
+  product integer,
+  create_date date,
+  name character varying,
+  write_uid integer,
+  write_date date
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE contrat_service
+  OWNER TO postgres;

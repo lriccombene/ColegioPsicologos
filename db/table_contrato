@@ -1,0 +1,13 @@
+﻿-- Table: contrato
+
+-- DROP TABLE contrato;
+
+CREATE TABLE contrato
+(
+
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE contrato
+  OWNER TO postgres;

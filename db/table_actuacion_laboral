@@ -1,0 +1,29 @@
+﻿-- Table: actuacion_laboral
+
+-- DROP TABLE actuacion_laboral;
+
+CREATE TABLE actuacion_laboral
+(
+  id integer NOT NULL,
+  id_party integer,
+  idareaprofesional integer,
+  CONSTRAINT actuacion_laboral_pkey PRIMARY KEY (id),
+  CONSTRAINT party_areaprofesionales FOREIGN KEY (id_party)
+      REFERENCES party_party (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE actuacion_laboral
+  OWNER TO postgres;
+
+-- Index: fki_party_areaprofesionales
+
+-- DROP INDEX fki_party_areaprofesionales;
+
+CREATE INDEX fki_party_areaprofesionales
+  ON actuacion_laboral
+  USING btree
+  (id_party);
+
